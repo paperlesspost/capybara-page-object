@@ -23,7 +23,7 @@ module CapybaraPageObject
         raise ArgumentError
       end
       source.visit target
-    end    
+    end
   end
 
   module ClassMethods
@@ -63,8 +63,8 @@ module CapybaraPageObject
       define_method(:path) { p }
     end
 
-    def self.component(name, &block)
-      define_method(name, &block)
+    def self.component(name, *args, &block)
+      define_method(name, *args, &block)
     end
 
     include CapybaraPageObject::Collections

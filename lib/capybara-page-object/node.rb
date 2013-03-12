@@ -24,8 +24,8 @@ module CapybaraPageObject
       @source ||= Capybara.current_session
     end
 
-    def self.element(name, &block)
-      define_method(name, &block)
+    def self.element(name, *args, &block)
+      define_method(name, *args, &block)
     end
 
     def self.field(name, &block)
