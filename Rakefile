@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-require 'rubygems'
 require 'bundler'
 require 'rspec'
 require 'rspec/core/rake_task'
@@ -34,7 +33,7 @@ Jeweler::RubygemsDotOrgTasks.new
 #   test.pattern = 'test/**/test_*.rb'
 #   test.verbose = true
 # end
-# 
+#
 # require 'rcov/rcovtask'
 # Rcov::RcovTask.new do |test|
 #   test.libs << 'test'
@@ -48,13 +47,3 @@ RSpec::Core::RakeTask.new do |t|
 end
 
 task :default => :spec
-
-require 'rdoc/task'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "capybara-page-object #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
