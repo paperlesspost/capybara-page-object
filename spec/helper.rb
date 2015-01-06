@@ -13,5 +13,4 @@ require 'rspec'
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'capybara-page-object'
-require 'capybara-page-object/patch'
+require 'capybara-page-object-patch'
