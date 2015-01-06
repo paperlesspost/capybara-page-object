@@ -13,16 +13,5 @@ require 'rspec'
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-unless ENV["SKIP_COVERAGE"]
-  require 'simplecov'
-
-  SimpleCov.start
-  SimpleCov.at_exit do
-    SimpleCov.result.format!
-    if SimpleCov.result.covered_percent < 100
-      `open coverage/index.html`
-     end
-  end
-end
-
 require 'capybara-page-object'
+require 'capybara-page-object/patch'
