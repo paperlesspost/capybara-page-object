@@ -1,5 +1,3 @@
-require "capybara-page-object"
-
 module CapybaraPageObjectPatch
 
   VERSION = "0.0.1"
