@@ -1,0 +1,2 @@
+
+# capybara-page-object-patch

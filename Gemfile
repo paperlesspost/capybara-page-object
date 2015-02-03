@@ -1,16 +1,10 @@
-source :rubygems
+source "https://rubygems.org"
 
 group :development do
-  gem "bundler", "~> 1.1.0"
-  gem "jeweler", "~> 1.8.3"
-  gem 'simplecov', :require => false
+  gem "bundler", "~> 1.5"
+  gem "jeweler", "~> 2.0", ">= 2.0.1"
   gem "rspec"
-  gem 'rake', '~> 0.9.2.2'
-  gem "rdoc", '~> 3.12'
+  gem "rake", "~> 10.4", ">= 10.4.2"
 end
 
-group :test do
-end
-
-gem "activesupport", "> 2.1.0" # for OrderedHash
-gem "capybara"
+gem "capybara-page-object", "0.6.1"
