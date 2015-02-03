@@ -13,39 +13,11 @@ Gem::Specification.new do |s|
   s.authors = ["Ari Russo"]
   s.description = "Patch for capybara-page-object"
   s.email = "ari@paperlesspost.com"
-  s.extra_rdoc_files = [
-    "LICENSE.txt",
-    "README.markdown"
-  ]
-  s.files = [
-    "Gemfile",
-    "Gemfile.lock",
-    "README.md",
-    "Rakefile",
-    "capybara-page-object-patch.gemspec",
-    "spec/common_spec.rb",
-    "spec/element/anchor_spec.rb",
-    "spec/element/base_spec.rb",
-    "spec/element/form_field_spec.rb",
-    "spec/element/form_spec.rb",
-    "spec/element/head_spec.rb",
-    "spec/element/image_spec.rb",
-    "spec/element/input_spec.rb",
-    "spec/element/list_item_spec.rb",
-    "spec/element/list_spec.rb",
-    "spec/element/meta_spec.rb",
-    "spec/element/select_spec.rb",
-    "spec/element/table_row_spec.rb",
-    "spec/element/table_spec.rb",
-    "spec/element/textarea_spec.rb",
-    "spec/fixtures/node.html",
-    "spec/helper.rb",
-    "spec/node_spec.rb",
-    "spec/page_spec.rb"
-  ]
-  s.homepage = "http://github.com/paperlesspost/capybara-page-object"
+  s.homepage    = "https://github.com/paperlesspost/capybara-page-object"
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.23"
   s.summary = "Patch for capybara-page-object"
 
   s.add_development_dependency "bundler", "~> 1.5"
